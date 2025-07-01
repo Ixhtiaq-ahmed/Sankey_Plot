@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<style>body{background-color:white;}</style>
+<script src="lib/htmlwidgets-1.6.4/htmlwidgets.js"></script>
+<script src="lib/d3-4.5.0/d3.min.js"></script>
+<script src="lib/sankey-1/sankey.js"></script>
+<script src="lib/sankeyNetwork-binding-0.4/sankeyNetwork.js"></script>
+  <title>Psychological Factors and Sleep Health</title>
+  <style>
+        html, body {
+          font-family: Arial, Helvetica, sans-serif;
+          margin: 0;
+          padding: 20px;
+          width: 100%;
+          overflow-x: auto;
+          background-color: #ffffff; /* Ensure consistent background */
+        }
+        .title {
+          font-size: 28px;
+          font-weight: bold;
+          text-align: center;
+          padding: 20px 0;
+        }
+        .subtitle {
+          font-size: 16px;
+          color: #444;
+          text-align: center;
+          padding: 10px 40px;
+        }
+        .grid-labels {
+          display: grid;
+          grid-template-columns: 13% 14% 15.3% 12% 11.3% 13% 12%;
+          gap: 0px;
+          font-weight: bold;
+          font-size: 16px;
+          text-align: center;
+          margin-bottom: 10px;
+          padding: 0 20px;
+          width: 100%;
+          max-width: 1600px;
+          margin-left: auto;
+          margin-right: auto;
+        }
+        .grid-labels div:nth-child(2), .grid-labels div:nth-child(3) {
+          padding-left: 5px;
+        }
+        .grid-labels div:nth-child(4), .grid-labels div:nth-child(5) {
+          padding-left: 15px;
+        }
+        .sankey-container {
+          display: flex;
+          justify-content: center;
+          width: 100%;
+          max-width: 1400px;
+          margin: 0 auto;
+        }
+        .legend {
+          margin-top: 20px;
+          padding: 10px 40px;
+          text-align: left;
+          width: 100%;
+          max-width: 1400px;
+          margin-left: auto;
+          margin-right: auto;
+        }
+        .legend h3 {
+          font-size: 20px;
+          margin-bottom: 10px;
+        }
+        .legend ul {
+          font-size: 15px;
+          line-height: 1.6;
+          list-style: none;
+          padding: 0;
+        }
+        .abbreviations {
+          margin-top: 30px;
+          padding: 20px 40px;
+          background-color: #f9f9f9;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+          width: 100%;
+          max-width: 1400px;
+          margin-left: auto;
+          margin-right: auto;
+        }
+        .abbreviations h3 {
+          font-size: 20px;
+          margin-bottom: 10px;
+        }
+        .abbreviations p {
+          font-size: 13px;
+          line-height: 1.6;
+          color: #444;
+          column-count: 2;
+          column-gap: 40px;
+        }
+        .footer {
+          margin-top: 20px;
+          font-size: 12px;
+          color: #888;
+          text-align: center;
+          padding: 10px 0;
+          width: 100%;
+          max-width: 1400px;
+          margin-left: auto;
+          margin-right: auto;
+        }
+      </style>
+</head>
+<body>
+  <div class="title">Psychological Factors and Sleep Health: Instrument Characteristics</div>
+  <div class="subtitle">This Sankey diagram visualizes the relationships between psychological factors and sleep health outcomes based on systematic synthesized evidence.</div>
+  <div class="grid-labels">
+    <div>Psychological<br>Factors</div>
+    <div>Domains</div>
+    <div>Constructs</div>
+    <div>Instruments for<br>Psychological Factors</div>
+    <div>Instruments for<br>Sleep Outcomes</div>
+    <div>Sleep Health<br>Dimensions</div>
+    <div>Type of<br>Sleep Outcome</div>
+  </div>
+  <div class="sankey-container">
+    <div id="htmlwidget-d532bf6ba70e048e6157" style="width:1600px;height:586px;" class="sankeyNetwork html-widget"></div>
+    <script type="application/json" data-for="htmlwidget-d532bf6ba70e048e6157">{"x":{"links":{"source":[19,39,55,56,1,1,5,6,2,2,2,37,41,20,21,21,22,35,7,40,40,40,40,38,8,8,23,42,43,9,24,24,10,25,25,44,26,27,27,27,27,27,27,27,27,45,46,28,57,58,47,29,11,12,13,13,14,15,15,15,0,0,0,0,16,30,17,31,36,51,59,48,60,52,53,49,61,34,34,50,3,3,18,32,4,4,4,4,4,4,4,33],"target":[45,42,59,60,5,11,24,33,9,15,16,40,53,47,41,47,42,37,23,44,46,47,50,39,27,30,42,53,53,32,46,47,27,55,56,53,47,55,56,43,45,46,57,58,47,53,53,47,59,61,53,47,26,29,21,27,25,19,20,28,1,2,3,4,22,47,27,47,38,54,62,51,62,54,54,53,62,35,36,52,7,18,31,48,6,8,10,12,13,14,17,49],"value":[1,1,8,2,2,1,2,1,1,3,1,5,1,1,1,1,1,5,1,1,1,2,1,1,1,1,1,3,2,1,1,1,1,2,1,1,1,6,1,2,1,2,3,4,9,2,4,1,3,4,19,1,1,1,2,25,3,1,1,1,3,5,2,36,1,1,1,1,1,1,11,1,2,1,33,1,4,5,1,1,1,1,1,1,1,2,1,1,27,3,1,1]},"nodes":{"name":["Pain-related","Affective / Emotional aspects","Behavioral / Coping responses","Social impact / Consequences","Threat appraisal","Affective qualities","Attention to pain","Consequences","Helplesness","Kinesiophobia","Magnification","Pain anxiety","Pain attention","Pain catastrophizing","Pain expectancy","Pain self-efficacy","Passive coping","Rumination","Stigma","ASES-Pain","CRSES","CSQ-Catastrophizing","CSQ-Passive coping","IPQ-Consequences","MPQ-Affective","Morning pain expectancy","PASS","PCS","PSEQ","PVAQ","RAI","SSCI","TSK","Today's pain focus","Sleep-related","Cognitive domain","Self-regulatory","Beliefs about sleep","Fatigue Self-efficacy","ASES-Sleep","DBAS-16","CES-D","IPQ-Identity","ISI","Not feeling rested upon waking","PHQ","PROMIS Sleep","PSQI","Sleep duration","Sleep quality Index","Sleeping <6 hours","Sleep Duration - Subjective","Sleep duration - Subjective","Sleep quality","Subjective sleep","Acti SOL, WASO, SE","Acti TST","PSG AHI, PLMI, ARI","PSG N1, N2, N3, REM","Sleep continuity","Sleep duration - Objective","Sleep stage","Objective sleep"],"group":["Pain_L1","Pain_L2","Pain_L2","Pain_L2","Pain_L2","Pain_L3","Pain_L3","Pain_L3","Pain_L3","Pain_L3","Pain_L3","Pain_L3","Pain_L3","Pain_L3","Pain_L3","Pain_L3","Pain_L3","Pain_L3","Pain_L3","Pain_L4","Pain_L4","Pain_L4","Pain_L4","Pain_L4","Pain_L4","Pain_L4","Pain_L4","Pain_L4","Pain_L4","Pain_L4","Pain_L4","Pain_L4","Pain_L4","Pain_L4","Sleep_L1","Sleep_L2","Sleep_L2","Sleep_L3","Sleep_L3","Sleep_L4","Sleep_L4","Subj_R3","Subj_R3","Subj_R3","Subj_R3","Subj_R3","Subj_R3","Subj_R3","Subj_R3","Subj_R3","Subj_R3","Subj_R2","Subj_R2","Subj_R2","Subj_R1","Obj_R3","Obj_R3","Obj_R3","Obj_R3","Obj_R2","Obj_R2","Obj_R2","Obj_R1"]},"options":{"NodeID":"name","NodeGroup":"group","LinkGroup":null,"colourScale":"d3.scaleOrdinal().domain([\"Pain_L1\",\"Pain_L2\",\"Pain_L3\",\"Pain_L4\",\"Sleep_L1\",\"Sleep_L2\",\"Sleep_L3\",\"Sleep_L4\",\"Subj_R1\",\"Subj_R2\",\"Subj_R3\",\"Obj_R1\",\"Obj_R2\",\"Obj_R3\",\"Other\"]).range([\"#D1495B\",\"#E66772\",\"#F18997\",\"#F5B3B2\",\"#EDAE49\",\"#F2C85A\",\"#F7D973\",\"#FBE286\",\"#086375\",\"#2A7C87\",\"#4E9D9F\",\"#1982C4\",\"#3C9DE2\",\"#65B0F0\",\"#CFD8DC\"])","fontSize":12,"fontFamily":"Arial, Helvetica, sans-serif","nodeWidth":20,"nodePadding":20,"units":"effect sizes (k)","margin":{"top":null,"right":null,"bottom":null,"left":null},"iterations":0,"sinksRight":false}},"evals":[],"jsHooks":{"render":[{"code":"\n    function(el) {\n      var svg = d3.select(el).select(\"svg\");\n      var total = 312.000000;\n      var groupColor = {\n        \"Pain\": \"#D1495B\",\n        \"Sleep\": \"#EDAE49\",\n        \"Subj\": \"#086375\",\n        \"Obj\": \"#1982C4\",\n        \"Other\": \"rgba(150,150,150,0.3)\"\n      };\n      function getBaseGroup(groupName) {\n        if (groupName.startsWith(\"Pain\")) return \"Pain\";\n        if (groupName.startsWith(\"Sleep\")) return \"Sleep\";\n        if (groupName.startsWith(\"Subj\")) return \"Subj\";\n        if (groupName.startsWith(\"Obj\")) return \"Obj\";\n        return \"Other\";\n      }\n      svg.selectAll(\".link\")\n        .style(\"stroke-opacity\", 0.25)\n        .style(\"stroke\", function(d) {\n          return groupColor[getBaseGroup(d.source.group)] || \"rgba(100,100,100,0.3)\";\n        })\n        .on(\"mouseover\", function(event, d) {\n          var pct = ((d.value / total) * 100).toFixed(1);\n          d3.select(this)\n            .transition().duration(150)\n            .style(\"stroke-width\", Math.max(1.5, d.dy * 1.2))\n            .style(\"stroke-opacity\", 0.75);\n          svg.selectAll(\".link-tooltip\").remove();\n          svg.append(\"text\")\n            .attr(\"class\", \"link-tooltip\")\n            .attr(\"x\", (d.source.x + d.target.x) / 2)\n            .attr(\"y\", (d.source.y + d.target.y) / 2 + 10)\n            .attr(\"text-anchor\", \"middle\")\n            .attr(\"font-size\", \"10px\")\n            .attr(\"fill\", \"#333\")\n            .attr(\"pointer-events\", \"none\")\n            .style(\"white-space\", \"pre-line\")\n            .text(d.source.name + \" → \" + d.target.name + \"\\n\" +\n                  d3.format(\",\")(d.value) + \" effect sizes (\" + pct + \"%)\");\n        })\n        .on(\"mouseout\", function(event, d) {\n          d3.select(this)\n            .transition().duration(150)\n            .style(\"stroke-width\", Math.max(1, d.dy))\n            .style(\"stroke-opacity\", 0.25);\n          svg.selectAll(\".link-tooltip\").remove();\n        });\n      svg.selectAll(\".node\")\n        .on(\"mouseover\", function(event, d) {\n          svg.selectAll(\".node-tooltip\").remove();\n          var incoming = d.targetLinks.reduce(function(sum, link) { return sum + link.value; }, 0);\n          var outgoing = d.sourceLinks.reduce(function(sum, link) { return sum + link.value; }, 0);\n          var incomingPct = ((incoming / total) * 100).toFixed(1);\n          var outgoingPct = ((outgoing / total) * 100).toFixed(1);\n          var tooltipText = \"\";\n          if (incoming > 0) {\n            tooltipText += \"Source: \" + d3.format(\",\")(incoming) + \" (\" + incomingPct + \"%)\";\n          }\n          if (outgoing > 0) {\n            if (tooltipText.length > 0) tooltipText += \"\\n\";\n            tooltipText += \"Target: \" + d3.format(\",\")(outgoing) + \" (\" + outgoingPct + \"%)\";\n          }\n          tooltipText += \"\\nTotal: \" + d3.format(\",\")(total) + \" (100%)\";\n          svg.append(\"text\")\n            .attr(\"class\", \"node-tooltip\")\n            .attr(\"x\", d.x + d.dx + 15)\n            .attr(\"y\", d.y + d.dy / 2)\n            .attr(\"text-anchor\", \"start\")\n            .attr(\"font-size\", \"10px\")\n            .attr(\"fill\", \"#333\")\n            .attr(\"pointer-events\", \"none\")\n            .style(\"white-space\", \"pre-line\")\n            .text(tooltipText);\n          d3.select(this).select(\"rect\")\n            .transition().duration(150)\n            .style(\"stroke-width\", 2)\n            .style(\"stroke\", \"#555\");\n        })\n        .on(\"mouseout\", function(event, d) {\n          svg.selectAll(\".node-tooltip\").remove();\n          d3.select(this).select(\"rect\")\n            .transition().duration(150)\n            .style(\"stroke-width\", null)\n            .style(\"stroke\", null);\n        });\n      svg.selectAll(\".node rect\")\n        .attr(\"rx\", 5)\n        .attr(\"ry\", 5);\n    }\n  ","data":null}]}}</script>
+  </div>
+  <div class="legend">
+    <h3>Legend</h3>
+    <ul>
+      <li>
+        <span style="color:#D1495B; font-weight:bold;">Pain-related psychological factors</span>
+      </li>
+      <li>
+        <span style="color:#EDAE49; font-weight:bold;">Sleep-related psychological factors</span>
+      </li>
+      <li>
+        <span style="color:#086375; font-weight:bold;">Subjective sleep outcomes</span>
+      </li>
+      <li>
+        <span style="color:#1982C4; font-weight:bold;">Objective sleep outcomes</span>
+      </li>
+    </ul>
+  </div>
+  <div class="abbreviations">
+    <h3>Abbreviations</h3>
+    <p>
+      Act: Actigraphy; AHI: Apnea-Hypopnea Index; ARI: Arousal Index; ASES: Arthritis Self-Efficacy Scale; 
+      CRSES: Chronic Rheumatism Self-Efficacy Scale; CSQ: Coping Strategies Questionnaire; 
+      DBAS: Dysfunctional Beliefs About Sleep; IPQ: Illness Perception Questionnaire; 
+      ISI: Insomnia Severity Index; MPQ: McGill Pain Questionnaire; PASS: Pain Anxiety Symptom Scale; 
+      PCS: Pain Catastrophizing Scale; PHQ: Patient Health Questionnaire; PLMDI: Periodic Limb Movement Disorder Index; 
+      PROMIS: Patient-Reported Outcomes Measurement Information System; PSG: Polysomnography; 
+      PSEQ: Pain Self-Efficacy Questionnaire; PSQI: Pittsburgh Sleep Quality Index; 
+      PVAQ: Pain Vigilance and Awareness Questionnaire; REM: Rapid Eye Movement; 
+      SE: Sleep Efficiency; SOL: Sleep Onset Latency; SSCI: Stigma Scale for Chronic Illnesses; 
+      TSK: Tampa Scale for Kinesiophobia; TST: Total Sleep Time; WASO: Wake After Sleep Onset;
+    </p>
+  </div>
+  <div class="footer">Compiled for: Are pain-related and sleep-related psychological factors related to sleep health in individuals with chronic musculoskeletal pain? – A systematic review and three-level meta-analysis with systematic synthesis of clinical instruments and sleep-related assessments.</div>
+</body>
+</html>
